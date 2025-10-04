@@ -1,0 +1,360 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo principal */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Cabeçalho --- */
+.header {
+    background-color: #1a237e; /* Azul Escuro */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Placeholder para logo, ajuste se usar imagem */
+.logo-img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #f0f0f0; 
+}
+
+.nav-bar a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.nav-bar .active {
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.btn-sair {
+    background-color: #e57373; /* Cor vermelha para o botão Sair */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Layout Principal --- */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Coluna Lateral (Sidebar) */
+.sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Genérico */
+.card {
+    background-color: #e0e0e0; /* Cinza claro para os cards */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card Informações da Máquina */
+.machine-info {
+    padding: 0;
+    overflow: hidden;
+}
+
+.machine-image .image-placeholder {
+    height: 200px;
+    background-color: #a0a0a0; /* Cinza da imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.machine-details {
+    padding: 15px 20px;
+    background-color: #fff; /* Fundo branco para os detalhes */
+    border-top: 1px solid #ccc;
+}
+.machine-details p {
+    margin: 5px 0;
+}
+
+/* Card de Filtros */
+.filters-card h3, .status-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.filter-list {
+    list-style: none;
+}
+
+.filter-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.radio-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 10px;
+}
+
+.radio-dot.active-dot {
+    background-color: #4caf50; /* Verde para o filtro ativo */
+}
+
+/* Card de Status */
+.status-card {
+    position: relative;
+    padding-bottom: 40px; /* Espaço para o ícone de nuvem */
+}
+
+.status-list {
+    list-style: none;
+}
+
+.status-list li {
+    margin: 10px 0;
+}
+
+.status-list input[type="radio"] {
+    /* Esconde o radio button nativo */
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.status-list label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.status-list label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+/* Estilo para o radio button marcado */
+.status-list input[type="radio"]:checked + label::before {
+    background-color: #4caf50; /* Cor de preenchimento do status "Disponível" */
+    border-color: #4caf50;
+}
+/* No seu print, o "Indisponível" está ativo, vamos marcar ele com o verde */
+#indisponivel:checked + label::before {
+    background-color: #4caf50; 
+    border-color: #4caf50;
+}
+
+
+.status-cloud-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #888;
+}
+
+
+/* --- Conteúdo Principal --- */
+.main-content {
+    flex-grow: 1;
+}
+
+.main-content h2 {
+    color: #1a237e; /* Azul Escuro */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Novo Registro */
+.new-maintenance {
+    background-color: #fff; /* Fundo branco */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc; /* Borda mais fina */
+}
+
+.form-group, .type-selection, .description-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label, .type-selection label, .description-group label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+    min-width: 80px;
+}
+
+.date-picker input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Seleção de Tipo (Rádio Botões) */
+.type-selection {
+    padding: 5px 0;
+    background-color: #e0e0e0; /* Fundo cinza claro */
+    border-radius: 5px;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    background-color: #ccc;
+    color: #333;
+    padding: 5px 12px;
+    margin-right: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: #1a237e; /* Azul escuro para seleção ativa */
+    color: white;
+    font-weight: bold;
+}
+
+/* Descrição e Ícone de Upload */
+.description-group {
+    align-items: flex-start;
+}
+.description-input-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.description-input-wrapper input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+.upload-icon {
+    color: #1a237e; /* Azul escuro */
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* --- Histórico e Tabela --- */
+.history-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.history-table-card {
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.trash-icon-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.trash-icon {
+    color: #e57373; /* Cor vermelha para lixeira */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+thead th {
+    background-color: #f0f0f0; /* Fundo do cabeçalho da tabela */
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa; /* Linhas alternadas */
+}
