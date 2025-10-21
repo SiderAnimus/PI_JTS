@@ -30,3 +30,181 @@
     background-color: #6a3e3b; 
     color: white;
 }
+
+
+/* Paleta de Cores do Design:
+   - Fundo da página (fora do card): #F8F9FA (claro)
+   - Fundo do Card/Container Principal: #E3E7E8 (cinza claro)
+   - Botões e Header: Escuros
+*/
+
+/* ------------------------------------ */
+/* ESTILOS GERAIS DA PÁGINA E HEADER */
+/* ------------------------------------ */
+body.bg-manutencao {
+    background-color: #F8F9FA; /* Fundo geral da página */
+}
+
+/* Estilo do botão "Sair" do Header (Seu código original) */
+.btn-sair {
+    color: #adb5bd;
+    border: 1px solid #adb5bd;
+    padding: 0.375rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-sair:hover {
+    color: #FFFFFF;
+    background-color: #495057;
+    border-color: #495057;
+}
+
+/* ------------------------------------ */
+/* LAYOUT PRINCIPAL E CARD CONTAINER */
+/* ------------------------------------ */
+
+/* Estilo do container principal onde ficam as duas colunas */
+.main-content-container {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+/* Título principal da página */
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilo base para todos os Cards (Fundo, Bordas) */
+.card {
+    background-color: #E3E7E8; /* Fundo cinza claro */
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    
+    height: 100%; /* Garante que os cards na coluna tenham a mesma altura */
+}
+
+
+/* ------------------------------------ */
+/* COLUNA ESQUERDA (MÁQUINA, FILTROS, STATUS) */
+/* ------------------------------------ */
+
+/* CARD DE INFORMAÇÕES DA MÁQUINA */
+.machine-info-card {
+    height: auto;
+}
+.machine-img {
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: 120px;
+    width: 100%;
+}
+.machine-text-info p {
+    font-size: 0.9rem;
+}
+.machine-placa-label, .machine-name-label {
+    color: #6c757d !important;
+}
+
+
+/* CARD DE FILTROS E STATUS */
+.filter-title, .status-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #343a40;
+}
+.filter-list li, .status-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo dos Labels e Radio Buttons */
+.form-check-label {
+    font-size: 0.95rem;
+    color: #343a40;
+}
+.form-check-input.filter-radio, .form-check-input.status-radio {
+    /* Customiza a cor do radio button */
+    background-color: #fff;
+    border-color: #ccc;
+    box-shadow: none;
+}
+.form-check-input:checked {
+    background-color: #343a40; /* Preto no Radio Checado */
+    border-color: #343a40;
+}
+
+/* ------------------------------------ */
+/* COLUNA DIREITA (FORMULÁRIO E HISTÓRICO) */
+/* ------------------------------------ */
+
+/* Estilo dos inputs finos do formulário de inserção */
+.custom-input-thin {
+    background-color: #FFFFFF;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.375rem 0.75rem; /* Menor padding para parecer mais fino */
+    font-size: 0.875rem;
+}
+
+/* Botão de Adicionar (+) */
+.add-history-btn {
+    background-color: #343a40;
+    border-color: #343a40;
+    font-weight: bold;
+}
+.add-history-btn:hover {
+    background-color: #495057;
+    border-color: #495057;
+}
+
+/* CARD DE HISTÓRICO */
+.history-card {
+    min-height: 500px; /* Garante que o card de histórico tenha altura suficiente */
+}
+.history-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Tabela de Histórico Customizada */
+.history-table {
+    border-collapse: separate; /* Permite espaçamento entre bordas */
+    border-spacing: 0;
+}
+
+.history-table th {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 500;
+    border-bottom: none; /* Remove a borda padrão do Bootstrap TH */
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+}
+
+.history-table tbody tr {
+    /* Define o estilo da linha divisória */
+    border-bottom: 1px solid #d8dbdf;
+}
+
+.history-table tbody tr td {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #343a40;
+}
+
+/* Linhas vazias - remove o conteúdo para manter apenas a linha divisória */
+.history-table tbody tr:empty td {
+    color: transparent;
+}
+
+/* Remove a borda da última linha */
+.history-table tbody tr:last-child {
+    border-bottom: none;
+}

@@ -32,50 +32,74 @@
 }
 
 
+
+/* Paleta de cores principal:
+   - Fundo do Formulário: #E3E7E8 (cinza claro)
+   - Inputs/Textarea: #FFFFFF (branco)
+   - Botão Adicionar: #1A1A1A (quase preto)
+   - Texto dos Rótulos: Cinza escuro/médio
+*/
+
+/* Estilo para o Body (fundo da página fora do formulário) */
 body.bg-light-gray {
-    background-color: #F8F9FA;
+    background-color: #F8F9FA; /* Um cinza mais leve para o fundo da página */
 }
+
+/* Estilo do container principal do formulário (Card) */
 .form-card-container {
-    background-color: #E3E7E8;
+    background-color: #E3E7E8; /* Cor de fundo do card, conforme a imagem */
     border-radius: 8px;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra leve para destacar */
 }
+
+/* Estilo para os rótulos (Labels) */
 .custom-label {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #6c757d;
+    color: #6c757d; /* Cinza médio para os textos de rótulo */
     margin-bottom: 0.35rem;
 }
+
+/* Estilo geral dos Inputs (Text, Select, Textarea) */
 .custom-input {
     background-color: #FFFFFF;
     border: 1px solid #ced4da;
     border-radius: 4px;
     padding: 0.75rem 1rem;
     line-height: 1.5;
-    height: auto;
+    height: auto; /* Garante que o select e input tenham altura similar */
+    /* Remove a borda de foco azul padrão do bootstrap */
     box-shadow: none; 
 }
+
 .custom-input:focus {
-    border-color: #A6B1B8;
+    border-color: #A6B1B8; /* Borda sutil no foco */
     box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.1);
     outline: 0;
 }
+
+/* Estilo específico para o input "Código da Máquina" */
 .code-input {
     font-weight: bold;
     color: #343a40;
 }
+
 .code-input::placeholder {
     color: #adb5bd;
 }
+
+/* Estilo para o campo de upload de arquivo customizado */
 .custom-file-input-wrapper .file-input-label {
     display: block;
     cursor: pointer;
     margin-bottom: 0;
-    color: #6c757d;
+    color: #6c757d; /* Cor do texto "Envie a imagem da máquina..." */
 }
+
+/* Estilo do botão "Adicionar Máquina" */
 .add-btn {
-    background-color: #1A1A1A;
+    background-color: #1A1A1A; /* Cor escura */
     border-color: #1A1A1A;
     color: #FFFFFF;
     font-weight: 600;
@@ -83,13 +107,19 @@ body.bg-light-gray {
     border-radius: 6px;
     transition: background-color 0.2s;
 }
+
 .add-btn:hover {
     background-color: #343a40;
     border-color: #343a40;
 }
+
+/* Estilo do botão "Cancelar" */
 .cancel-btn {
     font-weight: 600;
 }
+
+/* Você pode adicionar mais estilos para o header aqui se necessário,
+   como: .btn-sair, nav.bg-dark, etc. */
 .btn-sair {
     color: #adb5bd;
     border: 1px solid #adb5bd;
@@ -98,6 +128,7 @@ body.bg-light-gray {
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
 }
+
 .btn-sair:hover {
     color: #FFFFFF;
     background-color: #495057;
